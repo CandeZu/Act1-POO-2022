@@ -3,14 +3,12 @@ class Email:
     __dominio = ""
     __tipodominio = ""
     __contrasenia = "1234"
-    __listaEmails = []
 
     def __init__ (self, idCuenta, dominio, tipodominio, contrasenia=''):
         self.__idCuenta = idCuenta
         self.__dominio = dominio
         self.__tipodominio = tipodominio
         self.__contrasenia = contrasenia
-        self.__listaEmails = []
 
     def retornaEmail(self):
         return "{}@{}.{}".format(self.__idCuenta,self.__dominio,self.__tipodominio)
