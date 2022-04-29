@@ -32,14 +32,6 @@ class Email:
         self.__contrasenia = contrasenia
         return self.__contrasenia
     
-    def testListaCuenta (self):
-        archivo = open('librosPOO.csv')
-        reader = csv.reader(archivo,delimiter=';')
-        bandera = True
-        for fila in reader:
 
-    def agregarCuenta (self):
-    
-    def buscarCuenta (self):
     
     

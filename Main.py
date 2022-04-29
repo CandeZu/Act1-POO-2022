@@ -22,4 +22,16 @@ if __name__=='__main__':
     e1 = Email("Juan", "gmail", "com")
     print("Correo: {}@{}.{}".format (e1.getIdCuenta(), e1.getDominio(), e1.getTipoDominio()))
 
-    
+    archivo = open("Emails.csv")
+    reader = csv.reader(archivo, delimiter=";")
+    IDPrueba= input(" Ingrese ID que desea verificar\n")
+    mailItem4= Email()
+    cont=0
+    for comp in reader:
+            for i in range(10): 
+                mailItem4.crearCuenta(comp[i])
+                ident = mailItem4.getIdCuenta()
+                if IDPrueba == ident:
+                    cont += 1
+    print("Hay {} email con el ID {}\n".format(cont,IDPrueba))
+    archivo.close()
