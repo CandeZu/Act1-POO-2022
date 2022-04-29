@@ -10,7 +10,6 @@ class Email:
         self.__tipodominio = tipodominio
         self.__contrasenia = contrasenia
 
-
     def retornaEmail(self):
         return "{}@{}.{}".format(self.__idCuenta,self.__dominio,self.__tipodominio)
 
