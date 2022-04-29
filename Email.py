@@ -22,9 +22,6 @@ class Email:
     def getTipoDominio (self):
         return self.__tipodominio
 
-    # def crearCuenta(self, id, dominio, tipo):
-    #     cuenta = Email(id, dominio, tipo)
-    #     return self.retornaEmail
     def CrearCuenta(self, NuevoMail):
         arroba= NuevoMail.rfind("@")
         punto = NuevoMail.rfind(".")
