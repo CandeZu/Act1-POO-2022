@@ -33,5 +33,6 @@ if __name__=='__main__':
                 ident = mailItem4.getIdCuenta()
                 if IDPrueba == ident:
                     cont += 1
+    print("Hay {} mail con el ID {}\n".format(cont,IDPrueba))
     
     archivo.close()

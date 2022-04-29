@@ -4,7 +4,7 @@ class Email:
     __tipodominio = ""
     __contrasenia = "1234"
 
-    def __init__ (self, idCuenta, dominio, tipodominio, contrasenia=''):
+    def __init__ (self, idCuenta='', dominio='', tipodominio='', contrasenia=''):
         self.__idCuenta = idCuenta
         self.__dominio = dominio
         self.__tipodominio = tipodominio
@@ -22,9 +22,16 @@ class Email:
     def getTipoDominio (self):
         return self.__tipodominio
 
-    def crearCuenta(self, id, dominio, tipo):
-        cuenta = Email(id, dominio, tipo)
-        return self.retornaEmail
+    # def crearCuenta(self, id, dominio, tipo):
+    #     cuenta = Email(id, dominio, tipo)
+    #     return self.retornaEmail
+    def CrearCuenta(self, NuevoMail):
+        arroba= NuevoMail.rfind("@")
+        punto = NuevoMail.rfind(".")
+        if (arroba != -1) and (punto!= -1):
+            self.__idCuenta= NuevoMail[:arroba]
+            self.__dominio = NuevoMail[ arroba +1 : punto]
+            self.__tipodominio= NuevoMail [punto+1 :]
     
     def cambiarContrasenia(self, contrasenia):
         self.__contrasenia = contrasenia
